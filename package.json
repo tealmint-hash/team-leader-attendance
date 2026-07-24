@@ -1,0 +1,16 @@
+{
+  "name": "team-leader-attendance",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "node scripts/check-data.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.3.0"
+  },
+  "devDependencies": {
+    "vercel": "^50.20.0"
+  }
+}
