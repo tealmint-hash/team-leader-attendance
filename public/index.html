@@ -1,1 +1,47 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#11372f"><title>교육 참석 확인</title><meta name="description" content="권역, 본부, 이름을 선택해 교육 참석을 확인합니다."><link rel="stylesheet" href="/styles.css"></head><body><main class="shell"><header class="hero"><p class="eyebrow">EDUCATION CHECK-IN</p><h1>교육 참석 확인</h1><p>본인의 소속과 이름을 선택한 뒤 참석을 확인해 주세요.</p></header><section class="card" aria-labelledby="form-title"><div class="step-heading"><span>01</span><div><h2 id="form-title">본인 확인</h2><p>순서대로 선택해 주세요.</p></div></div><form id="attendance-form"><label for="region">권역</label><select id="region" required><option value="">권역을 선택해 주세요</option></select><label for="headquarters">본부</label><select id="headquarters" required disabled><option value="">먼저 권역을 선택해 주세요</option></select><label for="attendee">이름</label><select id="attendee" required disabled><option value="">먼저 본부를 선택해 주세요</option></select><div id="manual-wrap" class="hidden"><label for="manual-name">이름 직접 입력</label><input id="manual-name" type="text" maxlength="20" autocomplete="name" placeholder="예비 팀장 이름을 입력해 주세요" style="width:100%;min-height:54px;border:1px solid var(--line);border-radius:14px;background:white;padding:0 15px;color:var(--ink);outline:none;margin-bottom:18px"></div><div id="existing" class="notice hidden" role="status"></div><button id="submit-button" type="submit" disabled>참석 확인</button><p class="privacy">제출 후에는 중복 제출을 막기 위해 기존 기록이 표시됩니다.</p></form></section></main><dialog id="done-dialog"><div class="done-mark">✓</div><h2>참석 확인이 완료되었습니다</h2><p id="done-message"></p><button id="done-close" type="button">확인</button></dialog><div id="toast" class="toast hidden" role="alert"></div><script src="/app.js" defer></script></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#11372f">
+  <title>8월 교육 참석 확인</title>
+  <meta name="description" content="권역, 본부, 이름을 선택해 8월 교육 참석을 확인합니다.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">EDUCATION CHECK-IN</p>
+      <span id="event-badge" class="event-badge">2026년 8월 교육</span>
+      <h1>교육 참석 확인</h1>
+      <p>본인의 소속과 이름을 선택한 뒤 참석을 확인해 주세요.</p>
+    </header>
+    <section class="card" aria-labelledby="form-title">
+      <div class="step-heading"><span>01</span><div><h2 id="form-title">본인 확인</h2><p>순서대로 선택해 주세요.</p></div></div>
+      <form id="attendance-form">
+        <label for="region">권역</label>
+        <select id="region" required><option value="">권역을 선택해 주세요</option></select>
+        <label for="headquarters">본부</label>
+        <select id="headquarters" required disabled><option value="">먼저 권역을 선택해 주세요</option></select>
+        <label for="attendee">이름</label>
+        <select id="attendee" required disabled><option value="">먼저 본부를 선택해 주세요</option></select>
+        <div id="manual-wrap" class="hidden">
+          <label for="manual-name">이름 직접 입력</label>
+          <input id="manual-name" class="text-input" type="text" maxlength="20" autocomplete="name" placeholder="예비 팀장 이름을 입력해 주세요">
+        </div>
+        <div id="existing" class="notice hidden" role="status"></div>
+        <button id="submit-button" type="submit" disabled>8월 교육 참석 확인</button>
+        <p class="privacy">7월 기록과 별도로 저장됩니다. 제출 후에는 중복 제출을 막기 위해 기존 기록이 표시됩니다.</p>
+      </form>
+    </section>
+  </main>
+  <dialog id="done-dialog">
+    <div class="done-mark">✓</div>
+    <h2>참석 확인이 완료되었습니다</h2>
+    <p id="done-message"></p>
+    <button id="done-close" type="button">확인</button>
+  </dialog>
+  <div id="toast" class="toast hidden" role="alert"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
